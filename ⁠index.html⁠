@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة الحمد لله - لمراجعة وتسميع القرآن الكريم</title>
+    
+    <!-- خط أميري للآيات القرآنية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS للتنسيق -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#FAF7ED',
+              gold: '#D4AF37',
+              olive: '#1A3C34',
+            },
+            fontFamily: {
+              quran: ['"Scheherazade New"', 'Amiri', 'serif'],
+              arabic: ['Amiri', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- React & Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <style>
+      body {
+        background-color: #FAF7ED;
+        font-family: 'Amiri', serif;
+      }
+      .bg-pattern {
+        background-color: #FAF7ED;
+        background-image: radial-gradient(#D4AF37 0.75px, transparent 0.75px), radial-gradient(#1A3C34 0.75px, #FAF7ED 0.75px);
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
+        background-opacity: 0.05;
+      }
+    </style>
+  </head>
+  <body class="bg-pattern min-h-screen text-slate-800 antialiased">
+    <div id="root"></div>
+
+    <!-- استدعاء ملف السكريبت الرئيسي -->
+    <script type="text/babel" src="app.js"></script>
+  </body>
+</html>
